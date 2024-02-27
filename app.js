@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
     const apiDataBody = document.getElementById('apiDataBody');
     const loader = document.getElementById('loader');
-
+    const errorContainer = document.getElementById('errorContainer');
     loader.style.display = 'block';
     setTimeout(() => {
     fetch(apiUrl)
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => {
             console.error('Error fetching data:', error);
+            errorContainer.textContent = `Error fetching data: ${error.message}`;
         })
         .finally(() => {
    
