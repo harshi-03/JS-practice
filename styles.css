@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#apiDataTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#apiDataTable th, #apiDataTable td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#apiDataTable th {
+    background-color: #f2f2f2;
+}
+
+#apiDataTable tbody tr:hover {
+    background-color: #f5f5f5;
+}
+#loader {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    font-size: 18px;
+    font-weight: bold;
+}
