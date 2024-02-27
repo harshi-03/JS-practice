@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const apiDataBody = document.getElementById('apiDataBody');
     const loader = document.getElementById('loader');
     const errorContainer = document.getElementById('errorContainer');
+    
     loader.style.display = 'block';
     setTimeout(() => {
     fetch(apiUrl)
@@ -22,7 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2000);
   
     function displayData(data) {
+        // const filteredData = data.filter(item => item.userId === 1);
+    //     const totalPosts = data.reduce((accumulator, item) => accumulator + 1, 0);
 
+    //    alert(`Total Posts: ${totalPosts}`);
         data.forEach(item => {
            
             const row = apiDataBody.insertRow();
