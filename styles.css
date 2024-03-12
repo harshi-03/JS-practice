@@ -1,14 +1,35 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#contentContainer {
+    padding: 20px;
+}
+
+#wrapper {
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+#tableContainer {
+    max-width: 600px;
+    margin-top: 0px;
 }
 
 #apiDataTable {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
 }
 
-#apiDataTable th, #apiDataTable td {
+#apiDataTable th,
+#apiDataTable td {
     border: 1px solid #dddddd;
     padding: 8px;
     text-align: left;
@@ -16,19 +37,16 @@ body {
 
 #apiDataTable th {
     background-color: #f2f2f2;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 #apiDataTable tbody tr:hover {
     background-color: #f5f5f5;
 }
-/* #loader {
-    display: none;
-    text-align: center;
-    padding: 20px;
-    background-color: #f1f1f1;
-    font-size: 18px;
-    font-weight: bold;
-} */
+
 .loader {
     border: 8px solid #14d69f;
     border-top: 8px solid #3498db;
@@ -36,11 +54,24 @@ body {
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
-    margin: 20px auto; 
-    display: none; 
+    margin: 20px auto;
+    display: none;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#searchInput {
+    width: 300px; 
+    padding: 10px; 
+    font-size: 16px; 
+}
+#searchButton{
+    padding: 10px;
 }

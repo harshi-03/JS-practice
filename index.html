@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Data Display</title>
+    <title>Data Display</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <table id="apiDataTable">
-        <thead>
-            <tr>
-                <th>User ID</th>
-                <th>Title</th>
-                <th>Body</th>
-            </tr>
-        </thead>
-        <tbody id="apiDataBody"></tbody>
-    </table>
-    <div id="loader"class="loader"></div>
-    <div id="errorContainer" style="color: red;"></div>
+    <div id="firstPage">
+        <h1>Click the button to load the data</h1>
+        <button id="loadDataButton">Click to Load Data</button>
+    </div>
+   
+    <div id="secondPage" style="display: none;">
+        <div id="loader" class="loader" style="display: none;"> </div>
+        <div id="errorContainer" style="color: red;"></div>
+        <div id="searchContainer" style="display: none;">
+            <input type="text" id="searchInput" placeholder="Search here...">
+            <button id="searchButton">&#128269;</button>
+        </div>
+        <div id="wrapper" style="display: none;">
+        <div id="tableContainer">
+        <table id="apiDataTable">
+            <thead>
+                <tr>
+                    <th>User ID<button class="sortButton" data-column="0">&#8597;</button></th>
+                    <th>Title<button class="sortButton" data-column="1">&#8597;</button></th>
+                    <th>Body<button class="sortButton" data-column="2">&#8597;</button></th>
+                </tr>
+            </thead>
+            <tbody id="apiDataBody"></tbody>
+        </table></div></div>
+        
+    </div>
 
     <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+    
+
 </body>
 </html>
